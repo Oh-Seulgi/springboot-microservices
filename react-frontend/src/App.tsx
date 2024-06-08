@@ -1,4 +1,4 @@
-import ApiTest from "components/ApiTest";
+import ApiTest from "page/ApiTest";
 
 function App() {
   return <ApiTest />;
