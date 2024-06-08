@@ -1,5 +1,7 @@
+import ApiTest from "components/ApiTest";
+
 function App() {
-  return <div>Hello World!</div>;
+  return <ApiTest />;
 }
 
 export default App;
