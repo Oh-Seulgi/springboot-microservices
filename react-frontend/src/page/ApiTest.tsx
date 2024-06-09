@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { fetchTestData } from "../APIconfig";
 
-type ApiResponse = {
-  id: string;
-  name: string;
-};
+interface ApiResponse {
+  id?: string;
+  name?: string;
+}
 
 export default function ApiTest() {
-  const [apiResponse, setApiResponse] = useState<ApiResponse>();
+  const [apiResponse, setApiResponse] = useState<ApiResponse | null>(null);
 
   const handleApiTest = async () => {
     // FIXME: mockdata
