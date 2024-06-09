@@ -10,21 +10,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
 @RequestMapping("/boards")
 public class BoardController {
-
-    @GetMapping("list2")
-    public String list2(HttpServletRequest request) {
-        int port = request.getServerPort();
-        log.info("port = {}", port);
-        return String.format("[Member Service] port = %d", request.getServerPort());
-    }
 
     @GetMapping("/list")
     public ResponseEntity<List<Map<String, Object>>> getList() {
