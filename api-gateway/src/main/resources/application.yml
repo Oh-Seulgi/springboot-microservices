@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: api-gateway-service
+  config:
+    import: application-secret.yml
   cloud:
     gateway:
       routes: # \uB77C\uC6B0\uD305 \uC124\uC815
@@ -17,7 +19,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: ${eureka.url}
 
 logging:
   level:
